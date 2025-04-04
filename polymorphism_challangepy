@@ -1,0 +1,61 @@
+# Parent class - Animal
+class Animal:
+    """A base class for animals."""
+    def move(self):
+        """Default move method (to be overridden)."""
+        return "Moving in some way..."
+
+# Subclass 1 - Bird
+class Bird(Animal):
+    """A bird that flies."""
+    def move(self):
+        return "Flying in the sky 🕊️"
+
+# Subclass 2 - Fish
+class Fish(Animal):
+    """A fish that swims."""
+    def move(self):
+        return "Swimming in the water 🐟"
+
+# Subclass 3 - Dog
+class Dog(Animal):
+    """A dog that runs."""
+    def move(self):
+        return "Running on the ground 🐕"
+
+# Parent class - Vehicle
+class Vehicle:
+    """A base class for vehicles."""
+    def move(self):
+        return "Moving on a path..."
+
+# Subclass 1 - Car
+class Car(Vehicle):
+    """A car that drives."""
+    def move(self):
+        return "Driving on the road 🚗"
+
+# Subclass 2 - Plane
+class Plane(Vehicle):
+    """A plane that flies."""
+    def move(self):
+        return "Flying in the sky ✈️"
+
+# Subclass 3 - Boat
+class Boat(Vehicle):
+    """A boat that sails."""
+    def move(self):
+        return "Sailing on the water ⛵"
+
+# Testing polymorphism
+if __name__ == "__main__":
+    animals = [Bird(), Fish(), Dog()]
+    vehicles = [Car(), Plane(), Boat()]
+
+    print("Animal Movements:")
+    for animal in animals:
+        print(animal.move())
+
+    print("\nVehicle Movements:")
+    for vehicle in vehicles:
+        print(vehicle.move())
